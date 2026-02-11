@@ -5,10 +5,14 @@ from dotenv import load_dotenv
 
 # 1. CONFIGURAÇÕES INICIAIS
 load_dotenv()
-chave_openai = st.secrets["OPENAI_API_KEY"]
+client_openai = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 client_openai = OpenAI(api_key=chave_openai)
 
-st.set_page_config(page_title="Jardas - Seu Tutor de Inglês", page_icon="🎓")
+st.set_page_config(
+    page_title="Jardas Seu tutor de Ingês",
+    page_icon="jardas.png",
+    layout="centered")
+
 st.title("Olá sou o Jardas...")
 
 # --- MELHORIA 1: MEMÓRIA DE CONVERSA ---
