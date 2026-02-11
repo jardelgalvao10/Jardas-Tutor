@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 # 1. CONFIGURAÇÕES INICIAIS
 load_dotenv()
-client_openai = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client_openai = OpenAI(api_key=st.secrets["OPENAI_API_KEY"]
 client_openai = OpenAI(api_key=chave_openai)
 
 st.set_page_config(
