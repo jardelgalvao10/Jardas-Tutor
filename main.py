@@ -5,12 +5,14 @@ from dotenv import load_dotenv
 
 # 1. CONFIGURAÇÕES INICIAIS
 load_dotenv()
-client_openai = OpenAI(api_key=st.secrets["OPENAI_API_KEY"]
+
+# CORREÇÃO: Definindo a variável e fechando o parêntese corretamente
+chave_openai = st.secrets["OPENAI_API_KEY"]
 client_openai = OpenAI(api_key=chave_openai)
 
 st.set_page_config(
-    page_title="Jardas Seu tutor de Ingês",
-    page_icon="jardas.png",
+    page_title="Jardas Seu tutor de Inglês",
+    page_icon="🤖",  # Usei um emoji temporário para não dar erro até você subir a imagem
     layout="centered")
 
 st.title("Olá sou o Jardas...")
