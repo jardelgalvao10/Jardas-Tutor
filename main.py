@@ -6,13 +6,15 @@ from dotenv import load_dotenv
 # 1. CONFIGURAÇÕES INICIAIS
 load_dotenv()
 
-# CORREÇÃO: Definindo a variável e fechando o parêntese corretamente
+# Pegamos a chave primeiro e guardamos na variável
 chave_openai = st.secrets["OPENAI_API_KEY"]
+
+# Agora usamos a variável para criar o cliente da OpenAI
 client_openai = OpenAI(api_key=chave_openai)
 
 st.set_page_config(
     page_title="Jardas Seu tutor de Inglês",
-    page_icon="🤖",  # Usei um emoji temporário para não dar erro até você subir a imagem
+    page_icon="🤖", 
     layout="centered")
 
 st.title("Olá sou o Jardas...")
