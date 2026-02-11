@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 # 1. CONFIGURAÇÕES INICIAIS
 load_dotenv()
-client_openai = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+chave_openai = st.secrets["OPENAI_API_KEY"]
+client_openai = OpenAI(api_key=chave_openai)
 
 st.set_page_config(page_title="Jardas - Seu Tutor de Inglês", page_icon="🎓")
 st.title("Olá sou o Jardas...")
